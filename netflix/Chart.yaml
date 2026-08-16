@@ -1,0 +1,4 @@
+apiVersion: v2
+name: netflix
+description: Helm chart for netflix clone app
+version: 0.1.0
