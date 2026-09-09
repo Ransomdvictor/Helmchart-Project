@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gym-web
+  labels:
+    app: gym-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gym-web
+  template:
+    metadata:
+      labels:
+        app: gym-web
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: gym-web
+        image: devictor17/gym-web:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 3000
