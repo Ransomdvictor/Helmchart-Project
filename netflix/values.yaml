@@ -1,12 +1,19 @@
 replicaCount: 2
+
 image:
-  repository: devabayomi/netflix
-  tag: latest
+  repository: devictor17/Netflix-z
   pullPolicy: Always
+  tag: latest
+
 service:
   type: ClusterIP
   port: 80
   targetPort: 3000
-ingress:
-  enabled: true
-  host: netflix.giftedadura.co.uk
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "250m"
+  limits:
+    memory: "512Mi"
+    cpu: "500m"
