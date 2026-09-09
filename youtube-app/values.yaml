@@ -2,7 +2,7 @@ replicaCount: 2
 image:
   repository: devictor17/youtube-app
   pullPolicy: Always
-  tag: "75734102"
+  tag: "454197fc"
 service:
   type: ClusterIP
   port: 80
